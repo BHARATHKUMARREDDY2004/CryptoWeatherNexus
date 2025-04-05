@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #5b548a, #2b244d);
+}
+
+.widget {
+  position: relative;
+  height: 120px; /* Reduced initial height to fit just the search bar */
+  width: 500px;
+  margin-bottom: 2rem;
+  background: linear-gradient(120deg, #c547ff, #442bb2);
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  transition: height 0.5s ease; /* Smooth transition for height change */
+}
+
+.widgetExpanded {
+  height: 550px; /* Height when expanded to show weather data */
+}
+
+/* Add hover effect to indicate clickability */
+.widgetExpanded:hover, .cityCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 60px 0 rgba(0, 0, 0, 0.4), 0 22px 22px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.weatherLocation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.weatherLocation button {
+  background: #080705;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.weatherLocation input:focus {
+  outline: 0 none;
+}
+
+.widget .weatherIcon {
+  height: 60%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 100px;
+  color: white;
+}
+
+.widget .weatherIcon i {
+  padding-top: 30px;
+}
+
+.input_field {
+  width: 60%;
+  border-radius: 50px;
+  border: none;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.search_button {
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.icon_and_weatherInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.temperature {
+  font-size: 55px;
+  color: white;
+}
+
+.place {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 70px;
+  color: white;
+}
+
+.weatherCondition {
+  color: white;
+}
+
+.humidity {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.date {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+.initialMessage {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+/* New styles for predefined cities */
+.citiesContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.citiesContainer h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.cityCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cityCard {
+  background: linear-gradient(120deg, #c547ff, #442bb2);
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  height: 280px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cityCard h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.cityWeatherIcon {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.cityTemperature {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cityWeatherDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cityWeatherDetails p {
+  margin: 5px 0;
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+  .widget {
+    width: 90%;
+    height: auto;
+    min-height: 500px;
+  }
+  
+  .cityCard {
+    width: 100%;
+  }
+}
