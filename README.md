@@ -104,7 +104,7 @@ CryptoWeather Nexus addresses the needs of users interested in both meteorologic
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Ramakrishnajakkula/CryptoWeatherNexus/tree/main
+   git clone https://github.com/BHARATHKUMARREDDY2004/CryptoWeatherNexus/
    cd cryptoweather-nexus
    ```
 
