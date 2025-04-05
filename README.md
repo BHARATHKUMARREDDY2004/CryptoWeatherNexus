@@ -1,6 +1,6 @@
 # CryptoWeather Nexus
 
-[CryptoWeather Nexus](https://crypto-weather-nexus-ruddy.vercel.app/)
+[CryptoWeather Nexus](https://crypto-weather-nexus-gray.vercel.app/)
 
 A modern, multi-page dashboard combining real-time weather data, cryptocurrency information, and news in one comprehensive application.
 
