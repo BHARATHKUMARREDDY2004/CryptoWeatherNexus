@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const city = searchParams.get("city");
+  const apiKey = process.env.OPENWEATHER_API_KEY;
   
   if (!city) {
     return NextResponse.json({ error: "City parameter is required" }, { status: 400 });
@@ -11,7 +12,7 @@ export async function GET(request) {
 
   try {
     // Using OpenWeatherMap's 5-day/3-hour forecast API
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=755fc7c8a86c074404c14958b9779951`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
     
     const response = await fetch(url);
     
