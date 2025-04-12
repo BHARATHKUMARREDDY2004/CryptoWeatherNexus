@@ -7,7 +7,7 @@ export async function GET(request) {
     const latitude = searchParams.get("lat");
     const longitude = searchParams.get("lon");
     
-    const apiKey = process.env.OPENWEATHER_API_KEY || "755fc7c8a86c074404c14958b9779951";
+    const apiKey = process.env.OPENWEATHER_API_KEY;
     
     let url = "";
     if (address) {
